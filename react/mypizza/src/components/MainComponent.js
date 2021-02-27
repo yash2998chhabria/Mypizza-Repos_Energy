@@ -32,6 +32,7 @@ const Main = () => {
     })
   }, [])
   
+
   let filteredpizzas=''
 
   if(pizzalist) 
@@ -73,7 +74,7 @@ const Main = () => {
             <Col lg="7">
             {error && <Alert color="danger">{error}</Alert>}
             {isPending && <Spinner type="grow" color="danger"  style={{ width: '10rem', height: '10rem' }} />}
-            {filteredpizzas.length ? <CurrentPizzas filteredpizzas={filteredpizzas}/> : !error ? <Alert color="warning">No Pizzas Available for selected Filters!!</Alert>: <div></div>}
+            {filteredpizzas.length ? <CurrentPizzas filteredpizzas={filteredpizzas}/> : !error && !isPending ? <Alert color="warning">No Pizzas Available for selected Filters!!</Alert>: <div></div>}
             </Col>
           </Row>
           </div> );
