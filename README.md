@@ -14,7 +14,7 @@ ii)pip install -r requiremets.text
 i)cd mypizzaplace
 ii)python manage.py runserver
 
-3)Install Required nodemodules
+3)Install Required Node Modules:
 
 i)cd react
 ii)cd mypizza
