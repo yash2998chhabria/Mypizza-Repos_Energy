@@ -14,7 +14,7 @@ const Main = () => {
   const [filters,setFilters] = useState({category:'',base:'',cheese_type:'',price: 600})
 
   useEffect( () => {
-    fetch('http://127.0.0.1:8000/api/')
+    fetch('https://yashchhabria2998.pythonanywhere.com/api/')
     .then(res => {
       if(!res.ok){
         throw Error('Could Not Fetch Pizza Data')
