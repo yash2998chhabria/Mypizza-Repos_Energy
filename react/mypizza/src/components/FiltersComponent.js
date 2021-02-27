@@ -32,9 +32,11 @@ const Filters = (props) => {
     }
 
     return ( 
+
         <div  style={{ paddingTop: '50px' }}>
             <Row>
-            <Col md='10' style={{position: 'absolute', left: '50%',transform: 'translate(-50%)' }}>
+            {/* <Col md='10' style={{position: 'absolute', left: '50%',transform: 'translate(-50%)' }}> */}
+            <Col sm={{ size: 10, offset: 1 }}>
             
             <Card>
             <CardHeader>Filters</CardHeader>

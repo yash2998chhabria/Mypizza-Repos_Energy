@@ -61,12 +61,14 @@ const Main = () => {
 
 
   return (<div>
-          <Row>
+          <Row> 
             <Col lg="12">
             <Header />
             </Col>
+          </Row>
+          <Row>
             <Col lg="5">
-            <Filters filters={filters} setFilters={setFilters} />
+            <Filters filters={filters} setFilters={setFilters}/>
             </Col>
             <Col lg="7">
             {error && <Alert color="danger">{error}</Alert>}
