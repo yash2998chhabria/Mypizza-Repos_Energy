@@ -6,7 +6,7 @@ RUN INSTRUCTIONS ON YOUR TERMINAL
 
 1)Install Django Drf requirements:
 
-(preferably in a virutal environment)
+(preferably in a virtual environment)
 
 i)cd mypizzaplace 
 ii)pip install -r requirements.txt
