@@ -19,17 +19,7 @@ const Filters = (props) => {
 
     const classes = useStyles();
 
-    const handleChange = (e) => {
-        if(e.target.ariaValueNow)
-        {
-            props.setFilters({...props.filters, price:e.target.ariaValueNow })
-        }
-        else 
-        {
-            props.setFilters({...props.filters, [e.target.name]:e.target.value})
-        }
-        
-    }
+
 
     return ( 
 
@@ -44,9 +34,9 @@ const Filters = (props) => {
             <Label style={{ margin:'10px' }}>Category: {props.filters.category.toUpperCase()}{!props.filters.category && <span>ALL</span>}</Label>
             
             <ButtonGroup style={{  margin:'10px' }}>
-                <Button name='category' onClick={handleChange} color="success" value='Veg'>Veg</Button>
-                <Button name='category' onClick={handleChange} color="danger" value='Nonveg'>Non Veg</Button>
-                <Button name='category' onClick={handleChange} color="secondary" value=''>ALL</Button>
+                <Button name='category' onClick={props.handleChange} color="success" value='Veg'>Veg</Button>
+                <Button name='category' onClick={props.handleChange} color="danger" value='Nonveg'>Non Veg</Button>
+                <Button name='category' onClick={props.handleChange} color="secondary" value=''>ALL</Button>
             </ButtonGroup>
 
             <Label style={{ margin:'10px' }}>Base:</Label>
@@ -55,7 +45,7 @@ const Filters = (props) => {
             name='base'
             id='base_type'
             placeholder='Choose Base type'
-            onChange={handleChange}
+            onChange={props.handleChange}
             style={{ margin:'10px' }}
             >
             <option value=""></option>
@@ -71,7 +61,7 @@ const Filters = (props) => {
             name='cheese_type'
             id='cheese_type'
             placeholder='Choose Cheese type'
-            onChange={handleChange}
+            onChange={props.handleChange}
             style={{ margin:'10px' }}
             >
             <option value=""></option>
@@ -94,7 +84,7 @@ const Filters = (props) => {
                     min={100}
                     max={600}
                     name='price'
-                    onChange={handleChange}
+                    onChange={props.handleChange}
                 />
                 </div>
             

@@ -33,6 +33,20 @@ const Main = () => {
   }, [])
   
 
+
+  const handleChange = (e) => {
+    if(e.target.ariaValueNow)
+    {
+        setFilters({...filters, price:e.target.ariaValueNow })
+    }
+    else 
+    {
+        setFilters({...filters, [e.target.name]:e.target.value})
+    }   
+}
+
+
+
   let filteredpizzas=''
 
   if(pizzalist) 
@@ -62,14 +76,16 @@ const Main = () => {
 
 
   return (<div>
+    
           <Row> 
             <Col lg="12">
             <Header />
             </Col>
           </Row>
+
           <Row>
             <Col lg="5">
-            <Filters filters={filters} setFilters={setFilters}/>
+            <Filters filters={filters} handleChange={handleChange}/>
             </Col>
             <Col lg="7">
             {error && <Alert color="danger">{error}</Alert>}
@@ -77,7 +93,8 @@ const Main = () => {
             {filteredpizzas.length ? <CurrentPizzas filteredpizzas={filteredpizzas}/> : !error && !isPending ? <Alert color="warning">No Pizzas Available for selected Filters!!</Alert>: <div></div>}
             </Col>
           </Row>
-          </div> );
+
+         </div> );
   }
    
   export default Main;
