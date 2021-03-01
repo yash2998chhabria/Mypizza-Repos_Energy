@@ -3,7 +3,7 @@ from pizza.models import my_pizza
 from .serializers import PizzaSerializer
 
 
-class PizzaList(viewsets.ModelViewSet):
+class Pizza(viewsets.ModelViewSet):
     queryset = my_pizza.objects.all()
     serializer_class = PizzaSerializer
 

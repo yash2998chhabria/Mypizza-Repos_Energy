@@ -6,7 +6,7 @@ router = DefaultRouter()
 
 app_name = 'pizza_api'
 
-router.register('', views.PizzaList, basename='pizzacrud')
+router.register('', views.Pizza, basename='pizzacrud')
 
 urlpatterns = [
     #     path('', views.PizzaList.as_view(), name = 'listcreate'),
